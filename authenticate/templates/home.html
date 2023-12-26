@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Second Page</title>
+    <!-- Include the Tailwind CSS CDN (or use your own setup) -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    {% include 'test.html' %}
+</head>
+<body class="bg-gradient-to-r from-red-200 to-purple-300 min-h-screen flex items-center justify-center">
+
+    <div class="bg-white bg-opacity-20 p-8 rounded shadow-md w-full sm:w-96 text-center">
+        <!-- Replace 'John Doe' and '123 Main St' with actual user data -->
+        <h2 class="text-3xl font-semibold mb-6 text-purple-500">Welcome, 
+            {{username}} 
+        </h2>
+        
+        <div class="mb-4">
+            <p class="text-gray-600 text-sm font-medium">Address:</p>
+            <p class="text-black text-lg font-semibold">123 Main St</p>
+        </div>
+
+        <a href="{% url 'logout' %}">
+            <button class="bg-purple-400 text-white px-4 py-2 rounded-md hover:bg-purple-500 focus:outline-none focus:bg-purple-700 transition duration-300">
+                Logout
+            </button>
+        </a>
+        
+    </div>
+
+</body>
+</html>
